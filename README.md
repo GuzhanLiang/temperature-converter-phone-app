@@ -1,8 +1,8 @@
-!Developed phone app which converts Fahrenheit to Celsius and inversely
-!Display temperature whether it is below zero degree or above visually
-Manages the application’s view using widgets and padding\n
-Implement default state and on-press state
-Impllement splash page with icon and animated effect
+Developed phone app which converts Fahrenheit to Celsius and inversely <br />
+Display temperature whether it is below zero degree or above visually<br />
+Manages the application’s view using widgets and padding<br />
+Implement default state and on-press state<br />
+Impllement splash page with icon and animated effect<br />
 
 
 

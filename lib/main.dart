@@ -2,9 +2,11 @@
 // import 'dart:html';
 
 // import 'dart:html';
-import 'dart:ui';
+//import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/firstpage.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,11 +14,52 @@ class MyApp extends StatelessWidget {
   @override
   build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-      ),
-      home: TempApp(),
-    );
+        theme: ThemeData(
+          primarySwatch: Colors.purple,
+        ),
+        home: AnimatedSplashScreen(
+          splash: Wrap(
+            children: <Widget>[
+              Center(
+                child: Icon(
+                  Icons.sunny,
+                  size: 120,
+                  color: Colors.yellow[400],
+                ),
+              ),
+              Center(
+                child: Text(
+                  'Welcome to \n Temperature Converter!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          duration: 3000,
+          splashTransition: SplashTransition.scaleTransition,
+          backgroundColor: Colors.purple,
+
+          // Center(
+
+          //     child: Container(
+          //       child: Text(
+          //         'Welcome to \n Temperature Converter!',
+          //         textAlign: TextAlign.center,
+          //         style: TextStyle(
+          //           color: Colors.white,
+          //           fontSize: 24,
+          //           fontWeight: FontWeight.bold,
+          //         ),
+          //       ),
+          //     ),
+          nextScreen: TempApp(),
+        ));
   }
 }
 
